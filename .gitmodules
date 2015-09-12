@@ -1,0 +1,6 @@
+[submodule "STM32F4xx"]
+	path = STM32F4xx
+	url = https://github.com/mukymuk/STM32F4xx
+[submodule "freertos"]
+	path = freertos
+	url = https://github.com/mukymuk/freertos
