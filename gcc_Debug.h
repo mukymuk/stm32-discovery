@@ -600,9 +600,6 @@
 #ifndef __UDQ_FBIT__
 #define __UDQ_FBIT__ 64
 #endif
-#ifndef DEBUG
-#define DEBUG 1
-#endif
 #ifndef __INT8_TYPE__
 #define __INT8_TYPE__ signed char
 #endif
@@ -963,6 +960,9 @@
 #ifndef __SIZEOF_DOUBLE__
 #define __SIZEOF_DOUBLE__ 8
 #endif
+#ifndef Debug
+#define Debug 1
+#endif
 #ifndef __UFRACT_EPSILON__
 #define __UFRACT_EPSILON__ 0x1P-16UR
 #endif
@@ -1086,7 +1086,9 @@
 #endif
 
 // --- Include directories begin --- //
-//C:\Users\Shawn\Downloads\stm32cubef4\STM32Cube_FW_F4_V1.8.0\Projects\STM32F4-Discovery\Demonstrations\Inc
+//src
+//STM32F4xx\Inc
+//STM32F4xx\device\Inc
 //.
 //$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx/STM32F4xx_HAL_Driver/Inc
 //$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx/STM32F4xx_HAL_Driver/Inc/Legacy
@@ -1100,8 +1102,6 @@
 //c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/5.2.0/include-fixed
 //c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/5.2.0/../../../../arm-eabi/sys-include
 //c:\sysgcc\arm-eabi\bin\../lib/gcc/arm-eabi/5.2.0/../../../../arm-eabi/include
-//STM32F4xx\Inc
-//STM32F4xx\device\Inc
 // --- Include directories end --- //
 
 

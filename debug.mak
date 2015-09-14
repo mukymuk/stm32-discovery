@@ -6,7 +6,7 @@ BINARYDIR := Debug
 
 #Additional flags
 PREPROCESSOR_MACROS := DEBUG
-INCLUDE_DIRS := C:\Users\Shawn\Downloads\stm32cubef4\STM32Cube_FW_F4_V1.8.0\Projects\STM32F4-Discovery\Demonstrations\Inc STM32F4xx\Inc STM32F4xx\device\Inc
+INCLUDE_DIRS := src STM32F4xx\Inc STM32F4xx\device\Inc
 LIBRARY_DIRS := 
 LIBRARY_NAMES := 
 ADDITIONAL_LINKER_INPUTS := 
