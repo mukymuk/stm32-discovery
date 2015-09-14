@@ -95,6 +95,7 @@ static void rcc_init(void)
 static void pin_init(void)
 {
 	GPIO_InitTypeDef init;
+	__HAL_RCC_TIM1_CLK_ENABLE();
 	__HAL_RCC_TIM4_CLK_ENABLE();
 	__HAL_RCC_GPIOD_CLK_ENABLE();
 	init.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;

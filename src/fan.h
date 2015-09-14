@@ -1,4 +1,4 @@
-void fan_set_period(uint32_t desired_freq_hz);
+void fan_set_period(float desired_freq_hz);
 void fan_set_pwm(uint32_t fan, float compare);
 
 #define FAN_0	TIM_CHANNEL_1
