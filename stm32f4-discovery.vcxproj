@@ -35,7 +35,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeIncludeSearchPath>.;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\Legacy;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_HAL\Device\ST\STM32F4xx\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_HAL\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_HAL\RTOS\Template;c:\sysgcc\arm-eabi\arm-eabi\include\c++\5.2.0;c:\sysgcc\arm-eabi\arm-eabi\include\c++\5.2.0\arm-eabi\thumb\fpu\cortex_m4;c:\sysgcc\arm-eabi\arm-eabi\include\c++\5.2.0\backward;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\5.2.0\include;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\5.2.0\include-fixed;c:\sysgcc\arm-eabi\arm-eabi\sys-include;c:\sysgcc\arm-eabi\arm-eabi\include;STM32F4xx\Inc;STM32F4xx\device\Inc;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>C:\Users\Shawn\Downloads\stm32cubef4\STM32Cube_FW_F4_V1.8.0\Projects\STM32F4-Discovery\Demonstrations\Inc;.;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\STM32F4xx_HAL_Driver\Inc\Legacy;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_HAL\Device\ST\STM32F4xx\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_HAL\Include;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F4xxxx\CMSIS_HAL\RTOS\Template;c:\sysgcc\arm-eabi\arm-eabi\include\c++\5.2.0;c:\sysgcc\arm-eabi\arm-eabi\include\c++\5.2.0\arm-eabi\thumb\fpu\cortex_m4;c:\sysgcc\arm-eabi\arm-eabi\include\c++\5.2.0\backward;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\5.2.0\include;c:\sysgcc\arm-eabi\lib\gcc\arm-eabi\5.2.0\include-fixed;c:\sysgcc\arm-eabi\arm-eabi\sys-include;c:\sysgcc\arm-eabi\arm-eabi\include;STM32F4xx\Inc;STM32F4xx\device\Inc;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
     <NMakeForcedIncludes>$(ProjectDir)\gcc_Debug.h;$(VISUALGDB_DIR)\gcc_compat.h;$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\stm32_compat.h;$(NMakeForcedIncludes)</NMakeForcedIncludes>
     <NMakeBuildCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /build "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeBuildCommandLine>
     <NMakeCleanCommandLine>"$(VISUALGDB_DIR)\VisualGDB.exe" /clean "$(ProjectPath)" "/solution:$(SolutionPath)" "/config:$(Configuration)" "/platform:$(Platform)"</NMakeCleanCommandLine>
@@ -61,7 +61,8 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="LEDBlink.c" />
+    <ClCompile Include="fan.c" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="STM32F4xx\device\Src\system_stm32f4xx.c" />
     <ClCompile Include="STM32F4xx\Src\stm32f4xx_hal.c" />
     <ClCompile Include="STM32F4xx\Src\stm32f4xx_hal_adc.c" />
@@ -132,6 +133,7 @@
     <ClCompile Include="STM32F4xx\Src\stm32f4xx_ll_usb.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="fan.h" />
     <ClInclude Include="STM32F4xx\Inc\stm32f4xx_hal.h" />
     <ClInclude Include="STM32F4xx\Inc\stm32f4xx_hal_adc.h" />
     <ClInclude Include="STM32F4xx\Inc\stm32f4xx_hal_adc_ex.h" />

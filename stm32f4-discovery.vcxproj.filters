@@ -31,9 +31,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LEDBlink.c">
-      <Filter>Source files</Filter>
-    </ClCompile>
     <ClCompile Include="STM32F4xx\Src\stm32f4xx_hal.c">
       <Filter>Source files\Device-specific files\STM32F4xx</Filter>
     </ClCompile>
@@ -237,6 +234,12 @@
     </ClCompile>
     <ClCompile Include="STM32F4xx\device\Src\system_stm32f4xx.c">
       <Filter>Source files\Device-specific files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="fan.c">
+      <Filter>Source files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -449,6 +452,9 @@
     </ClInclude>
     <ClInclude Include="STM32F4xx\Inc\stm32f4xx_ll_usb.h">
       <Filter>Header files\Device-specific files\STM32F4xx</Filter>
+    </ClInclude>
+    <ClInclude Include="fan.h">
+      <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

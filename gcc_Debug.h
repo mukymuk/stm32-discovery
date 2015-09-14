@@ -1086,6 +1086,7 @@
 #endif
 
 // --- Include directories begin --- //
+//C:\Users\Shawn\Downloads\stm32cubef4\STM32Cube_FW_F4_V1.8.0\Projects\STM32F4-Discovery\Demonstrations\Inc
 //.
 //$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx/STM32F4xx_HAL_Driver/Inc
 //$(LOCALAPPDATA)\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32/STM32F4xxxx/STM32F4xx_HAL_Driver/Inc/Legacy
