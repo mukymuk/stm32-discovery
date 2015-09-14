@@ -2,3 +2,5 @@ CodeDB/
 Debug
 VisualGDBCache
 *sdf
+*.old
+.vs
