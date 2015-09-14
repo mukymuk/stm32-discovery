@@ -75,7 +75,7 @@ static void rcc_init(void)
 	osc_init.OscillatorType = RCC_OSCILLATORTYPE_HSE;
 	osc_init.HSEState = RCC_HSE_ON;
 	osc_init.PLL.PLLState = RCC_PLL_ON;
-	osc_init.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+	osc_init.PLL.PLLSource = RCC_PLLSOURCE_HSE; 
 	osc_init.PLL.PLLM = 8;
 	osc_init.PLL.PLLN = 336;
 	osc_init.PLL.PLLP = RCC_PLLP_DIV2;
@@ -89,8 +89,6 @@ static void rcc_init(void)
 	clk_ini.APB2CLKDivider = RCC_HCLK_DIV2;
 
 	HAL_RCC_ClockConfig(&clk_ini, FLASH_LATENCY_5);
-	HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / 1000);
-	HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
 }
 
 
@@ -109,8 +107,8 @@ static void pin_init(void)
 
 int main(void)
 {
-	HAL_Init();
 	rcc_init();
+	HAL_Init();
 	pin_init();
 	fan_set_period(25000);
 	fan_set_pwm(FAN_0, 0.1);

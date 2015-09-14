@@ -8,13 +8,14 @@ void fan_set_period( uint32_t desired_freq_hz )
 	TIM_ClockConfigTypeDef clock_config;
 	TIM_MasterConfigTypeDef master_config;
 	TIM_OC_InitTypeDef oc_config;
-
+	uint32_t clk_int;
+	
 	s_timer.Instance = TIM4;
 	s_timer.Init.Prescaler = 0;
 	s_timer.Init.CounterMode = TIM_COUNTERMODE_UP;
-	s_timer.Init.Period = 10000;
 	s_timer.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-
+	s_timer.Init.Period = (uint32_t)((float)HAL_RCC_GetPCLK2Freq() / (float)desired_freq_hz);
+	
 	HAL_TIM_PWM_Init(&s_timer);
 
 	oc_config.OCMode = TIM_OCMODE_PWM1;
