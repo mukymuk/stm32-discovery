@@ -7,11 +7,17 @@ static TIM_HandleTypeDef	s_input_timer;
 void fan_init(void)
 {
 	TIM_IC_InitTypeDef	 input_config;
+	TIM_ClockConfigTypeDef clock_config;
+	
 	s_input_timer.Instance = TIM1;
 	s_input_timer.Init.Period = 0xFFFF;
 	s_input_timer.Init.Prescaler = 0;
 	s_input_timer.Init.ClockDivision = 0;
 	s_input_timer.Init.CounterMode = TIM_COUNTERMODE_UP;  
+	
+	clock_config.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+	HAL_TIM_ConfigClockSource(&s_input_timer, &clock_config);
+	
 	HAL_TIM_IC_Init(&s_input_timer);
 	input_config.ICPrescaler = TIM_ICPSC_DIV1;
 	input_config.ICFilter = 0;  

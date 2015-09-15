@@ -98,12 +98,17 @@ static void pin_init(void)
 	__HAL_RCC_TIM1_CLK_ENABLE();
 	__HAL_RCC_TIM4_CLK_ENABLE();
 	__HAL_RCC_GPIOD_CLK_ENABLE();
-	init.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
+	__HAL_RCC_GPIOE_CLK_ENABLE();
 	init.Mode = GPIO_MODE_AF_PP;
 	init.Pull = GPIO_NOPULL;
 	init.Speed = GPIO_SPEED_HIGH;
+	init.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
 	init.Alternate = GPIO_AF2_TIM4;
 	HAL_GPIO_Init(GPIOD, &init);
+
+	init.Pin = GPIO_PIN_9 | GPIO_PIN_11 | GPIO_PIN_13 | GPIO_PIN_14;
+	init.Alternate = GPIO_AF1_TIM1;
+	HAL_GPIO_Init(GPIOE, &init);
 }
 
 int main(void)
@@ -111,6 +116,7 @@ int main(void)
 	rcc_init();
 	HAL_Init();
 	pin_init();
+	fan_init();
 	fan_set_period(25000);
 	fan_set_pwm(FAN_0, 0.1);
 	fan_set_pwm(FAN_1, 0.3);

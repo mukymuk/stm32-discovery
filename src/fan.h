@@ -1,5 +1,6 @@
 void fan_set_period(float desired_freq_hz);
 void fan_set_pwm(uint32_t fan, float compare);
+void fan_init(void);
 
 #define FAN_0	TIM_CHANNEL_1
 #define FAN_1	TIM_CHANNEL_2
